@@ -15,7 +15,7 @@ class AddressesController < OpenReadController
 
   # POST /addresses
   def create
-    @address = Address.new(address_params)
+    @address = current_user.addresses.build(address_params)
 
     if @address.save
       render json: @address, status: :created, location: @address
