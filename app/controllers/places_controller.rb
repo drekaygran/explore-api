@@ -38,7 +38,7 @@ class PlacesController < OpenReadController
   # DELETE /places/1
   def destroy
     @place.destroy
-
+  # binding.pry
     head :no_content
   end
 
