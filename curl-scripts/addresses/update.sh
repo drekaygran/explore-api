@@ -7,7 +7,8 @@ curl "http://localhost:4741/addresses/${ID}" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "address": {
-      "street_1": "'"${STREET}"'"
+      "street_1": "'"${STREET}"'",
+      "place_id": "'"${PLACE}"'"
     }
   }'
 

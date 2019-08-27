@@ -2,5 +2,5 @@
 
 class AddressSerializer < ActiveModel::Serializer
   attributes :street_1, :street_2, :city, :state, :zip_code
-  belongs_to :place
+  has_one :place
 end

@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class AddressesController < OpenReadController
-  before_action :set_address, only: [:show, :update, :destroy]
+  before_action :set_address, only: %i[show update destroy]
 
   # GET /addresses
   def index
@@ -42,11 +44,16 @@ class AddressesController < OpenReadController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_address
-    @address = Address.find(params[:id])
+    @address = current_user.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.
   def address_params
-    params.require(:address).permit(:street_1, :street_2, :city, :state, :zip_code, :place_id)
+    params.require(:address).permit(:street_1,
+                                    :street_2,
+                                    :city,
+                                    :state,
+                                    :zip_code,
+                                    :place_id)
   end
 end
