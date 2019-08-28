@@ -44,7 +44,7 @@ class AddressesController < OpenReadController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_address
-    @address = current_user.find(params[:id])
+    @address = current_user.addresses.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.
