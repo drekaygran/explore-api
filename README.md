@@ -18,6 +18,8 @@ Welcome to my app.  If you're here, you're probably either wondering where all t
 - Javascript
 - Ruby on Rails
 - Heroku
+- Axios
+- Bootstrap
 
 ### Unsolved Problems: ###
 - Insert Marker on Map
@@ -33,7 +35,7 @@ I started this project with the goal to complete CRUDing the places resource. On
 ### Catalog of Routes ###
 
 
-Verb         |	URI Pattern
+HTTP Verb         |	URI Pattern
 ------------ | -------------
 GET | /places
 GET | /places/:id
@@ -44,10 +46,10 @@ GET | /addresses/:id
 POST | /addresses
 PATCH | /addresses/:id
 DELETE | /addresses/:id
-POST	/sign-up
-POST	/sign-in
-PATCH	/change-password
-DELETE	/sign-out
+POST |	/sign-up
+POST |	/sign-in
+PATCH	| /change-password
+DELETE |	/sign-out
 
 ### Set up instructions ###
 If you'd like your own version of this project follow these steps.
